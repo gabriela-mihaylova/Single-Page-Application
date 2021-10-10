@@ -1,0 +1,32 @@
+<div class="col-md-12 mt-4"></div>
+  <div class="card mb-2" >
+    <div class="card-body">
+
+      <h5 class="card-title text-center">{{announcement.title}}</h5>
+      <p class="card-text">Description: <br>{{announcement.description}}</p>
+      <!--<p class="card-text">{{announce.likes}}</p>-->
+      <p class="card-text">{{announcement.type}}</p>
+      <p class="card-text">{{announcement.category}}</p>
+      <p class="card-text">{{announcement.isActive}}</p>
+
+       <!-- <p>{{user?.name}}</p>-->
+        <!--  <div *ngIf="hasLoggedIn">
+          <button class="btn btn-outline-primary ml-auto" >Approve</button>
+          <button class="btn btn-outline-primary ml-2">Decline</button>
+          </div>
+      <button type="button" *ngIf="hasLoggedOrganization" (click)="onActive($event)">Active</button>-->
+          <div *ngIf="(hasLoggedUser && !announceApplied)" class="text-right">
+            <button type="button" class="btn btn-outline-primary" >Like</button>
+            <button type="button" class="btn btn-outline-primary ml-2"  (click)="applyNow()"(click)="onClick($event)" [disabled]="announcement.isActive==='inactive'">Apply now</button>
+          </div>
+      <div *ngIf="hasLoggedOrganization">
+       <!-- <button class="btn btn-outline-success" type="button" (click)="onEdit()" >Edit</button>-->
+        <a class="btn btn-outline-success" [routerLink]="['/announcements','edit',announcement.id]">Edit</a>
+        <button type="button" class="btn btn-outline-danger ml-2"(click)="announceDeleted.emit(announcement.id)">Delete</button>
+      </div>
+
+    </div>
+
+
+  </div>
+

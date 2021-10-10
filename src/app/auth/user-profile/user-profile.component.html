@@ -1,0 +1,11 @@
+<div class="card justify-content-center">
+  <div class="card-body">
+    <h5 class="card-title text-center">Your profile</h5>
+    Name:<p class="card-text">{{users?.name}}</p>
+    Username:<p class="card-text">{{users?.username}}</p>
+    Password:<p class="card-text">{{users?.password}}</p>
+    Email: <p class="card-text">{{users?.email}}</p>
+    <a class="btn btn-outline-success" [routerLink]="['/user-profile','edit',users?.id]">Edit your profile</a>
+    <button class="btn btn-outline-danger" (click)="onDelete(users?.id)">Delete your profile</button>
+  </div>
+</div>

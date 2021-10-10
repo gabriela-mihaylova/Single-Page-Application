@@ -1,0 +1,26 @@
+
+
+<div *ngFor="let announce of announce" class="col-sm-4 col-md-12">
+<app-card-list-organization [announcement]="announce" [announceApplied]="listApplied" (announceDeleted)="announceDeleted.emit($event)"
+                            (selectedAnnounce)="onAnnounceSelected($event)">
+                           <!-- (selectedAnnounce)="onAnnounceApplied()"
+                             (announceDeleted)="announceDeleted.emit($event)"-->
+                              </app-card-list-organization>
+
+</div>
+
+
+  <!--<div class="card-text" *ngIf="hasLoggedUser">
+    <ul class="list-group col-sm-4">
+      <li class="list-group-item">{{selectedAnnounce?.title}}</li>
+
+    </ul>-->
+ <!--<div *ngFor="let lists of list">{{lists}}</div>
+
+<div>
+  <ul class="list-group col-sm-4" *ngFor="let lists of list">
+    <li class="list-group-item" >{{list}}</li>
+  </ul>
+</div>
+-->
+

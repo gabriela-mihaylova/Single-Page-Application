@@ -1,0 +1,8 @@
+<!--<app-post-td-form (announceSubmitted)="onAnnounceSubmit($event)"></app-post-td-form>-->
+<!--<app-post-reactive-form (announceSubmitted)="onAnnounceSubmit($event)"></app-post-reactive-form>-->
+<div class="mb-3">
+  <a routerLink="/announcements/create" *ngIf="hasLoggedOrganization">Create new</a>
+</div>
+
+<app-card-item [announce]="announcement" [announceApplied]="false" (announceDeleted)="onAnnounceDeleted($event)"></app-card-item>
+

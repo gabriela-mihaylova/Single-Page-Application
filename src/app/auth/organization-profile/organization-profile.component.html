@@ -1,0 +1,12 @@
+<div class="card justify-content-center">
+  <div class="card-body">
+    <h5 class="card-title text-center">Profile</h5>
+    Name:<p class="card-text">{{organizations?.name}}</p>
+    Username:<p class="card-text">{{organizations?.username}}</p>
+    Password:<p class="card-text">{{organizations?.password}}</p>
+    Email: <p class="card-text">{{organizations?.email}}</p>
+    <a class="btn btn-outline-success" [routerLink]="['/organization-profile','edit',organizations?.id]">Edit</a>
+    <button class="btn btn-outline-danger" (click)="onDelete(organizations?.id)">Delete</button>
+  </div>
+</div>
+

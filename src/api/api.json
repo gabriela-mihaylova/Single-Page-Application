@@ -1,0 +1,96 @@
+{
+  "announce": [
+    {
+      "id": 2,
+      "title": "Senior Developer",
+      "description": "We are searching a Java Junior Developer for",
+      "type": "part-time",
+      "category": "test",
+      "isActive": "active"
+    },
+    {
+      "id": 3,
+      "title": "new ",
+      "description": "test",
+      "type": "test",
+      "category": "test",
+      "isActive": "active"
+    },
+    {
+      "id": 4,
+      "title": "Data Modeling",
+      "description": "Data base",
+      "type": "full-time",
+      "category": "1",
+      "isActive": "active"
+    },
+    {
+      "id": 5,
+      "title": "New",
+      "description": "title",
+      "type": "test",
+      "category": "test",
+      "isActive": "inactive"
+    }
+  ],
+  "announced-applied": [
+    {
+      "id": 1,
+      "title": ""
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    }
+  ],
+  "announcedapplied": [
+    {
+      "username": "user1",
+      "announce": {
+        "id": 4,
+        "title": "Data Modeling",
+        "description": "Data base",
+        "type": "full-time",
+        "category": "1",
+        "isActive": "active"
+      },
+      "id": 1
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "name": "User",
+      "username": "user1",
+      "password": "userpass",
+      "email": "user@u.com"
+    },
+    {
+      "name": "test",
+      "username": "username",
+      "password": "userpass",
+      "repeatPassword": "userpass",
+      "email": "user@u.com",
+      "id": 2
+    },
+    {
+      "name": "User",
+      "username": "user3",
+      "password": "userpass",
+      "email": "user3@u.com",
+      "id": 3
+    }
+  ],
+  "organization": [
+    {
+      "id": 1,
+      "name": "IBM Company",
+      "username": "javaOrg",
+      "password": "12345",
+      "email": "java@org.com",
+      "isActive": "active"
+    }
+  ]
+}

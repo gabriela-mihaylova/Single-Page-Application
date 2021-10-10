@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" xmlns="http://www.w3.org/1999/html">
+
+  <div class="navbar-collapse navbar">
+
+      <ul class="navbar-nav mr-auto">
+        <ng-container *ngIf="hasLoggedIn">
+          <li class="nav-item" >
+            <a class="nav-link" routerLink="announcements">Home</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="announcements-applied">Your Announcements</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link">Organization</a>
+        </li>
+        </ng-container>
+      </ul>
+
+  </div>
+
+
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav ml-auto">
+    <li class="nav-item" *ngIf="!hasLoggedIn">
+        <a class="nav-link" routerLink="login">Login </a>
+      </li>
+      <li class="nav-item" *ngIf="hasLoggedIn">
+        <a class="nav-link" routerLink="user-profile">Profile</a>
+      </li>
+      <li class="nav-item" *ngIf="hasLoggedIn">
+        <a class="nav-link" (click)="onLogout()">Logout</a>
+      </li>
+
+      <li class="nav-item" >
+        <a class="nav-link" routerLink="loginOrganization" *ngIf="!hasLoggedOrganization">Login for Organization </a>
+      </li>
+      <ng-container *ngIf="hasLoggedOrganization">
+      <li class="nav-item" >
+        <a class="nav-link" routerLink="user-profile">Profile</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" (click)="onLogoutOrganization()">Logout</a>
+      </li>
+
+      <li class="nav-item mr-auto">
+        <a class="nav-link" routerLink="announcements">Home</a>
+      </li>
+      </ng-container>
+</ul>
+  </div>
+
+</nav>
